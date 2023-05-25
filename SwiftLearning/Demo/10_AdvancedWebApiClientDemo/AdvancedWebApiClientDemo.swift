@@ -3,23 +3,31 @@ import SwiftUI
 struct AdvancedWebApiClientDemo: View {
     
     @State private var responseData: Array<PostEntry> = []
-    
+    @State private var loading = false
+
     var body: some View {
         Group {
-            VStack(alignment: .leading) {
-                Text("\(responseData.count) entries")
-                ScrollView {
-                    VStack(alignment: .leading) {
+            
+            if loading {
+                ProgressView()
+            } else {
+                VStack(alignment: .leading) {
+                    Text("\(responseData.count) entries")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(.mint)
+                    ScrollView {
                         ForEach(responseData){ x in
                             Text("- \(x.title)").lineLimit(1)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom)
                         }
                     }
                 }
             }
-            .padding()
         }
+        .padding()
         .onAppear {
+            loading = true
             accessWebApi()
         }
     }
@@ -39,42 +47,22 @@ struct AdvancedWebApiClientDemo: View {
                     return
                 }
                 
-                responseData.removeAll()
-                for x in posts {
-                    responseData.append(x)
+                try? await Task.sleep(nanoseconds: millisToNano(milliSecond: 2000))
+                
+                await MainActor.run {
+                    responseData.removeAll()
+                    for x in posts {
+                        responseData.append(x)
+                    }
                 }
+                
+                loading = false
                 
             } catch {
                 print(error)
             }
         }
-        
-//        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
-//            print("Error 1")
-//            return
-//        }
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "GET"
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//
-//            if let data = data {
-//                let jsonDecoder = JSONDecoder()
-//                guard let json = try? jsonDecoder.decode(Array<BlogEntry>.self, from: data) else {
-//                    print("Error")
-//                    return
-//                }
-//                responseData.removeAll()
-//                for x in json {
-//                    responseData.append(x)
-//                }
-//            }
-//        }
-//        task.resume()
     }
-    
-    
 }
 
 struct AdvancedWebApiClientDemo_Previews: PreviewProvider {

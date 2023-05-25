@@ -13,23 +13,31 @@ struct BlogEntry: Codable, Identifiable {
 struct WebApiClientDemo: View {
     
     @State private var responseData: Array<BlogEntry> = []
-    
+    @State private var loading = false
+
     var body: some View {
         Group {
-            VStack(alignment: .leading) {
-                Text("\(responseData.count) entries")
-                ScrollView {
-                    VStack(alignment: .leading) {
+            
+            if loading {
+                ProgressView()
+            } else {
+                VStack(alignment: .leading) {
+                    Text("\(responseData.count) entries")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(.mint)
+                    ScrollView {
                         ForEach(responseData){ x in
                             Text("- \(x.title)").lineLimit(1)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.bottom)
                         }
                     }
                 }
             }
-            .padding()
         }
+        .padding()
         .onAppear {
+            loading = true
             accessWebApi()
         }
     }
@@ -37,30 +45,39 @@ struct WebApiClientDemo: View {
     
     func accessWebApi() {
         
-
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
-            print("Error 1")
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-
-            if let data = data {
-                let jsonDecoder = JSONDecoder()
-                guard let json = try? jsonDecoder.decode(Array<BlogEntry>.self, from: data) else {
-                    print("Error")
+        Task.detached {
+            do {
+                guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
                     return
                 }
-                responseData.removeAll()
-                for x in json {
-                    responseData.append(x)
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "GET"
+                
+                let (data, _) = try await URLSession.shared.data(for: request)
+                
+                let jsonDecoder = JSONDecoder()
+                guard let json = try? jsonDecoder.decode(Array<BlogEntry>.self, from: data) else {
+                    return
                 }
+                
+                try? await Task.sleep(nanoseconds: millisToNano(milliSecond: 2000))
+
+                await MainActor.run {
+                    responseData.removeAll()
+                    for x in json {
+                        responseData.append(x)
+                    }
+                }
+                
+                loading = false
+               
+
+            } catch {
+                print("Error")
+                print(error)
             }
         }
-        task.resume()
     }
     
     
