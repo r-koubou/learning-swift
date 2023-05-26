@@ -16,7 +16,6 @@
 		5354B2D92A171865001DA00F /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354B2D82A171865001DA00F /* CellView.swift */; };
 		536F1B1E2A11E8E70010886D /* LearningSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */; };
 		536F1B202A11E8E70010886D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F1B1F2A11E8E70010886D /* ContentView.swift */; };
-		536F1B222A11E8E80010886D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536F1B212A11E8E80010886D /* Assets.xcassets */; };
 		536F1B252A11E8E80010886D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536F1B242A11E8E80010886D /* Preview Assets.xcassets */; };
 		537604E62A1EFAA30033BA9B /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537604E52A1EFAA30033BA9B /* ApiResponse.swift */; };
 		537604E82A1EFAEA0033BA9B /* ApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537604E72A1EFAEA0033BA9B /* ApiResponseParser.swift */; };
@@ -35,6 +34,8 @@
 		53AA839E2A1B0AE900A625B7 /* SimpleThumnbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA839D2A1B0AE900A625B7 /* SimpleThumnbnailView.swift */; };
 		53AA83A22A1B1C4E00A625B7 /* ImageViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA83A12A1B1C4E00A625B7 /* ImageViewProxy.swift */; };
 		53AA83A52A1B446F00A625B7 /* TabViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA83A42A1B446F00A625B7 /* TabViewDemo.swift */; };
+		53D90C802A208A55003855FB /* ImageFromBinaryDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D90C7F2A208A55003855FB /* ImageFromBinaryDemo.swift */; };
+		53D90C822A209E99003855FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D90C812A209E99003855FB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,6 @@
 		536F1B1A2A11E8E70010886D /* LearningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftApp.swift; sourceTree = "<group>"; };
 		536F1B1F2A11E8E70010886D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		536F1B212A11E8E80010886D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		536F1B242A11E8E80010886D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		537604E52A1EFAA30033BA9B /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		537604E72A1EFAEA0033BA9B /* ApiResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseParser.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		53AA839D2A1B0AE900A625B7 /* SimpleThumnbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleThumnbnailView.swift; sourceTree = "<group>"; };
 		53AA83A12A1B1C4E00A625B7 /* ImageViewProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewProxy.swift; sourceTree = "<group>"; };
 		53AA83A42A1B446F00A625B7 /* TabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDemo.swift; sourceTree = "<group>"; };
+		53D90C7F2A208A55003855FB /* ImageFromBinaryDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromBinaryDemo.swift; sourceTree = "<group>"; };
+		53D90C812A209E99003855FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +133,9 @@
 		536F1B1C2A11E8E70010886D /* LearningSwift */ = {
 			isa = PBXGroup;
 			children = (
+				53D90C812A209E99003855FB /* Assets.xcassets */,
 				536F1B1F2A11E8E70010886D /* ContentView.swift */,
 				536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */,
-				536F1B212A11E8E80010886D /* Assets.xcassets */,
 				53AA83A62A1B645F00A625B7 /* Demo */,
 				536F1B232A11E8E80010886D /* Preview Content */,
 			);
@@ -249,6 +251,7 @@
 				53A949DA2A1CB6AA00660896 /* 08_FormDemo */,
 				53A949DD2A1CCB9400660896 /* 09_WebApiClientDemo */,
 				53A949E42A1DF68400660896 /* 10_AdvancedWebApiClientDemo */,
+				53D90C7E2A208A34003855FB /* 11_ImageFromBinaryDemo */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -259,6 +262,14 @@
 				533E82652A1B65060094CC72 /* TextFieldViewDemo.swift */,
 			);
 			path = 03_TextFieldDemo;
+			sourceTree = "<group>";
+		};
+		53D90C7E2A208A34003855FB /* 11_ImageFromBinaryDemo */ = {
+			isa = PBXGroup;
+			children = (
+				53D90C7F2A208A55003855FB /* ImageFromBinaryDemo.swift */,
+			);
+			path = 11_ImageFromBinaryDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				536F1B252A11E8E80010886D /* Preview Assets.xcassets in Resources */,
+				53D90C822A209E99003855FB /* Assets.xcassets in Resources */,
 				53A949D62A1C99EA00660896 /* Localizable.strings in Resources */,
-				536F1B222A11E8E80010886D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +354,7 @@
 				53AA83992A171ABF00A625B7 /* Util.swift in Sources */,
 				5354B2D52A171809001DA00F /* Information.swift in Sources */,
 				53A949E52A1DF6CA00660896 /* AdvancedWebApiClientDemo.swift in Sources */,
+				53D90C802A208A55003855FB /* ImageFromBinaryDemo.swift in Sources */,
 				53AA83A52A1B446F00A625B7 /* TabViewDemo.swift in Sources */,
 				533E826D2A1C853A0094CC72 /* LabelViewDemo.swift in Sources */,
 				53AA839E2A1B0AE900A625B7 /* SimpleThumnbnailView.swift in Sources */,

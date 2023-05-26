@@ -49,6 +49,9 @@ struct ContentView: View {
                         makeLinkView(AdvancedWebApiClientDemo.self){
                             AdvancedWebApiClientDemo()
                         }
+                        makeLinkView(ImageFromBinaryDemo.self){
+                            ImageFromBinaryDemo()
+                        }
                     }
                 }
                 
