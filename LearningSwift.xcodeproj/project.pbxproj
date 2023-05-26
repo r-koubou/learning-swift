@@ -14,7 +14,7 @@
 		5354B2D52A171809001DA00F /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354B2D42A171809001DA00F /* Information.swift */; };
 		5354B2D72A171828001DA00F /* ThumnbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354B2D62A171828001DA00F /* ThumnbnailView.swift */; };
 		5354B2D92A171865001DA00F /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5354B2D82A171865001DA00F /* CellView.swift */; };
-		536F1B1E2A11E8E70010886D /* SwiftLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F1B1D2A11E8E70010886D /* SwiftLearningApp.swift */; };
+		536F1B1E2A11E8E70010886D /* LearningSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */; };
 		536F1B202A11E8E70010886D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536F1B1F2A11E8E70010886D /* ContentView.swift */; };
 		536F1B222A11E8E80010886D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536F1B212A11E8E80010886D /* Assets.xcassets */; };
 		536F1B252A11E8E80010886D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536F1B242A11E8E80010886D /* Preview Assets.xcassets */; };
@@ -45,8 +45,8 @@
 		5354B2D42A171809001DA00F /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		5354B2D62A171828001DA00F /* ThumnbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumnbnailView.swift; sourceTree = "<group>"; };
 		5354B2D82A171865001DA00F /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		536F1B1A2A11E8E70010886D /* SwiftLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		536F1B1D2A11E8E70010886D /* SwiftLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningApp.swift; sourceTree = "<group>"; };
+		536F1B1A2A11E8E70010886D /* LearningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSwiftApp.swift; sourceTree = "<group>"; };
 		536F1B1F2A11E8E70010886D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		536F1B212A11E8E80010886D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		536F1B242A11E8E80010886D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -116,28 +116,28 @@
 			children = (
 				53AA839A2A173DCE00A625B7 /* Frameworks */,
 				536F1B1B2A11E8E70010886D /* Products */,
-				536F1B1C2A11E8E70010886D /* SwiftLearning */,
+				536F1B1C2A11E8E70010886D /* LearningSwift */,
 			);
 			sourceTree = "<group>";
 		};
 		536F1B1B2A11E8E70010886D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				536F1B1A2A11E8E70010886D /* SwiftLearning.app */,
+				536F1B1A2A11E8E70010886D /* LearningSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		536F1B1C2A11E8E70010886D /* SwiftLearning */ = {
+		536F1B1C2A11E8E70010886D /* LearningSwift */ = {
 			isa = PBXGroup;
 			children = (
 				536F1B1F2A11E8E70010886D /* ContentView.swift */,
-				536F1B1D2A11E8E70010886D /* SwiftLearningApp.swift */,
+				536F1B1D2A11E8E70010886D /* LearningSwiftApp.swift */,
 				536F1B212A11E8E80010886D /* Assets.xcassets */,
 				53AA83A62A1B645F00A625B7 /* Demo */,
 				536F1B232A11E8E80010886D /* Preview Content */,
 			);
-			path = SwiftLearning;
+			path = LearningSwift;
 			sourceTree = "<group>";
 		};
 		536F1B232A11E8E80010886D /* Preview Content */ = {
@@ -264,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		536F1B192A11E8E70010886D /* SwiftLearning */ = {
+		536F1B192A11E8E70010886D /* LearningSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 536F1B282A11E8E80010886D /* Build configuration list for PBXNativeTarget "SwiftLearning" */;
+			buildConfigurationList = 536F1B282A11E8E80010886D /* Build configuration list for PBXNativeTarget "LearningSwift" */;
 			buildPhases = (
 				536F1B162A11E8E70010886D /* Sources */,
 				536F1B172A11E8E70010886D /* Frameworks */,
@@ -276,9 +276,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftLearning;
-			productName = SwiftLearning;
-			productReference = 536F1B1A2A11E8E70010886D /* SwiftLearning.app */;
+			name = LearningSwift;
+			productName = LearningSwift;
+			productReference = 536F1B1A2A11E8E70010886D /* LearningSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -296,7 +296,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 536F1B152A11E8E70010886D /* Build configuration list for PBXProject "SwiftLearning" */;
+			buildConfigurationList = 536F1B152A11E8E70010886D /* Build configuration list for PBXProject "LearningSwift" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -310,7 +310,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				536F1B192A11E8E70010886D /* SwiftLearning */,
+				536F1B192A11E8E70010886D /* LearningSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -352,7 +352,7 @@
 				537604E62A1EFAA30033BA9B /* ApiResponse.swift in Sources */,
 				53A949D12A1C970B00660896 /* LocalizationDemo.swift in Sources */,
 				533E82692A1C61290094CC72 /* ValueSelectorDemo.swift in Sources */,
-				536F1B1E2A11E8E70010886D /* SwiftLearningApp.swift in Sources */,
+				536F1B1E2A11E8E70010886D /* LearningSwiftApp.swift in Sources */,
 				537604F32A1EFDD60033BA9B /* BaseUrl.swift in Sources */,
 				53A949CE2A1C8EA000660896 /* ProgressViewDemo.swift in Sources */,
 				53A949E72A1DFA9200660896 /* WebApiClient.swift in Sources */,
@@ -497,7 +497,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftLearning/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LearningSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = 3CNWT7WWYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -512,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.SwiftLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.LearningSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -529,7 +529,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftLearning/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"LearningSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = 3CNWT7WWYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -544,7 +544,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.SwiftLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroaki.LearningSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -556,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		536F1B152A11E8E70010886D /* Build configuration list for PBXProject "SwiftLearning" */ = {
+		536F1B152A11E8E70010886D /* Build configuration list for PBXProject "LearningSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				536F1B262A11E8E80010886D /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		536F1B282A11E8E80010886D /* Build configuration list for PBXNativeTarget "SwiftLearning" */ = {
+		536F1B282A11E8E80010886D /* Build configuration list for PBXNativeTarget "LearningSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				536F1B292A11E8E80010886D /* Debug */,
