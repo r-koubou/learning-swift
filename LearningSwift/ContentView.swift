@@ -15,42 +15,50 @@ struct ContentView: View {
                 ScrollView {
 
                     VStack {
- 
-                        makeLinkView(AsyncScrollViewDemo.self){
-                            AsyncScrollViewDemo()
+                        // 連続して10を超えるビューの配置が出来ないため、Groupで分割
+
+                        Group {
+                            makeLinkView(AsyncScrollViewDemo.self){
+                                AsyncScrollViewDemo()
+                            }
+                            
+                            makeLinkView(TabViewDemo.self){
+                                TabViewDemo()
+                            }
+                            
+                            makeLinkView(TextFieldViewDemo.self){
+                                TextFieldViewDemo()
+                            }
+                            
+                            makeLinkView(ValueSelectorDemo.self){
+                                ValueSelectorDemo()
+                            }
+                            
+                            makeLinkView(LabelViewDemo.self){
+                                LabelViewDemo()
+                            }
+                            
+                            makeLinkView(ProgressViewDemo.self){
+                                ProgressViewDemo()
+                            }
+                            
+                            makeLinkView(FormDemo.self){
+                                FormDemo()
+                            }
+                            makeLinkView(WebApiClientDemo.self){
+                                WebApiClientDemo()
+                            }
+                            makeLinkView(AdvancedWebApiClientDemo.self){
+                                AdvancedWebApiClientDemo()
+                            }
+                            makeLinkView(ImageFromBinaryDemo.self){
+                                ImageFromBinaryDemo()
+                            }
                         }
-                        
-                        makeLinkView(TabViewDemo.self){
-                            TabViewDemo()
-                        }
-                        
-                        makeLinkView(TextFieldViewDemo.self){
-                            TextFieldViewDemo()
-                        }
-                        
-                        makeLinkView(ValueSelectorDemo.self){
-                            ValueSelectorDemo()
-                        }
-                        
-                        makeLinkView(LabelViewDemo.self){
-                            LabelViewDemo()
-                        }
-                        
-                        makeLinkView(ProgressViewDemo.self){
-                            ProgressViewDemo()
-                        }
-                        
-                        makeLinkView(FormDemo.self){
-                            FormDemo()
-                        }
-                        makeLinkView(WebApiClientDemo.self){
-                            WebApiClientDemo()
-                        }
-                        makeLinkView(AdvancedWebApiClientDemo.self){
-                            AdvancedWebApiClientDemo()
-                        }
-                        makeLinkView(ImageFromBinaryDemo.self){
-                            ImageFromBinaryDemo()
+                        Group {
+                            makeLinkView(ScaleByMultiSwipeDemo.self){
+                                ScaleByMultiSwipeDemo()
+                            }
                         }
                     }
                 }
