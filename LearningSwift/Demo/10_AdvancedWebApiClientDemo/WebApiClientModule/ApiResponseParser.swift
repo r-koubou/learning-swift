@@ -8,7 +8,7 @@ protocol ApiResponseParser
 }
 
 
-struct JsonResponseParser<TResponse: Decodable> : ApiResponseParser
+struct GenericJsonResponseParser<TResponse: Decodable> : ApiResponseParser
 {
     func parse(data: Data, response: HTTPURLResponse) -> ApiResponseWithBody<TResponse>
     {

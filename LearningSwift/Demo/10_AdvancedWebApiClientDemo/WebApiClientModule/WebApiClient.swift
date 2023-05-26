@@ -2,6 +2,37 @@ import Foundation
 
 struct WebApiClient
 {
+    func appendHttpRequestHeader(request: inout URLRequest, key: String, value: String)
+    {
+        guard !key.isEmpty && !value.isEmpty else {
+            return
+        }
+
+        request.addValue(value, forHTTPHeaderField: key)
+    }
+
+    func setRequestBodyForUploadBytes(request: inout URLRequest, bytes: inout [UInt8], mime: String = "application/octet-stream") throws
+    {
+        guard bytes.count > 0 else {
+            throw NSError(domain: "WebApiClient", code: 0, userInfo: [NSLocalizedDescriptionKey: "bytes is empty."])
+        }
+        
+        request.httpBody = Data(bytes)
+        request.setValue(mime, forHTTPHeaderField: "Content-Type")
+    }
+    
+    typealias BoundaryString = String
+    
+    func setRequestBodyForMultiPartData(request: inout URLRequest, _ appendingData: (inout Data, BoundaryString)->Void) throws
+    {
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        var data = Data()
+        appendingData(&data, boundary)
+        request.httpBody = data
+    }
+
     func requestAsync(request: URLRequest) async throws -> ApiResponse
     {
         do {

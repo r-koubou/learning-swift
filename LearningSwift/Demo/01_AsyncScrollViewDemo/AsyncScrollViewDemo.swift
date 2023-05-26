@@ -8,12 +8,14 @@ struct AsyncScrollViewDemo : View
     var body : some View {
         VStack {
             Button("Add") {
-                informations.append(Information(
-                    name: "Name \(count)",
-                    description: "desscription of \(count)",
-                    thumbnailPath: "https://picsum.photos/320/320"
-                ))
-                count += 1
+                for _ in 0..<10 {
+                    informations.append(Information(
+                        name: "Name \(count)",
+                        description: "desscription of \(count)",
+                        thumbnailPath: "https://picsum.photos/320/320"
+                    ))
+                    count += 1
+                }
             }
 
             Button("Clear") {

@@ -201,12 +201,12 @@
 			path = 08_FormDemo;
 			sourceTree = "<group>";
 		};
-		53A949DD2A1CCB9400660896 /* 09_WebApiCLientDemo */ = {
+		53A949DD2A1CCB9400660896 /* 09_WebApiClientDemo */ = {
 			isa = PBXGroup;
 			children = (
 				53A949DE2A1CCBB800660896 /* WebApiClientDemo.swift */,
 			);
-			path = 09_WebApiCLientDemo;
+			path = 09_WebApiClientDemo;
 			sourceTree = "<group>";
 		};
 		53A949E42A1DF68400660896 /* 10_AdvancedWebApiClientDemo */ = {
@@ -247,7 +247,7 @@
 				53A949CC2A1C8E8300660896 /* 06_ProgressViewDemo */,
 				53A949CF2A1C96E800660896 /* 07_LocalizationDemo */,
 				53A949DA2A1CB6AA00660896 /* 08_FormDemo */,
-				53A949DD2A1CCB9400660896 /* 09_WebApiCLientDemo */,
+				53A949DD2A1CCB9400660896 /* 09_WebApiClientDemo */,
 				53A949E42A1DF68400660896 /* 10_AdvancedWebApiClientDemo */,
 			);
 			path = Demo;

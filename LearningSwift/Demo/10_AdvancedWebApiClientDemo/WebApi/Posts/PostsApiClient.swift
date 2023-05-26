@@ -8,6 +8,6 @@ struct PostsApiClient
         request.httpMethod = "GET"
                 
         return try await WebApiClient()
-            .requestWithResponseAsync(request: request, parser: JsonResponseParser<[PostEntry]>())
+            .requestWithResponseAsync(request: request, parser: GenericJsonResponseParser<[PostEntry]>())
     }
 }

@@ -1,5 +1,9 @@
 import SwiftUI
 
+func nameOfType<T>(_ t: T.Type) -> String
+{
+    return String(describing: t)
+}
 
 func makeTitleText( _ title: String) -> Text
 {
@@ -7,7 +11,6 @@ func makeTitleText( _ title: String) -> Text
         .fontWeight(.bold)
         .font(.system(size: 24))
 }
-
 
 func millisToNano(milliSecond: Int) -> UInt64
 {
